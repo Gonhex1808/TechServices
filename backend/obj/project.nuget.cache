@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "TB9XCCm+3J4=",
+  "success": true,
+  "projectFilePath": "E:\\APZ Programação dos Sistemas de Informação\\UC00627 - Instalar e configurar servidores Web\\TechServices\\backend\\TechService.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gonca\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\gonca\\.nuget\\packages\\microsoft.openapi\\1.6.25\\microsoft.openapi.1.6.25.nupkg.sha512",
+    "C:\\Users\\gonca\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512",
+    "C:\\Users\\gonca\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.6\\swashbuckle.aspnetcore.9.0.6.nupkg.sha512",
+    "C:\\Users\\gonca\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.6\\swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
+    "C:\\Users\\gonca\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.6\\swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512",
+    "C:\\Users\\gonca\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\9.0.6\\swashbuckle.aspnetcore.swaggerui.9.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

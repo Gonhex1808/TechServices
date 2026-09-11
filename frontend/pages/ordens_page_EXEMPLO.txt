@@ -1,0 +1,41 @@
+EXEMPLO FUTURO - ORDENS DE SERVIÇO
+==================================
+
+from components.crud_page import CrudPage
+
+
+def criar_ordens_page(
+    page,
+    api,
+):
+    return CrudPage(
+        page=page,
+        api=api,
+
+        titulo="Ordens de Serviço",
+
+        id_campo="idOrdem",
+
+        colunas=[
+            ("ID", "idOrdem"),
+            ("Cliente", "cliente"),
+            ("Descrição", "descricao"),
+            ("Estado", "estado"),
+        ],
+    )
+
+
+No main.py:
+
+ordens_api = CrudApi(
+    API_URL,
+    "/api/ordens-servico",
+)
+
+
+O aluno NÃO copia a interface inteira.
+
+Ele informa apenas:
+    título
+    endpoint
+    campos

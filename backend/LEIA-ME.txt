@@ -1,0 +1,60 @@
+TECHSERVICE API - VERSÃO 6 CORRIGIDA
+
+Esta versão mantém a estrutura simples da V5 e usa os campos REAIS das tabelas compartilhadas.
+
+FUNCIONALIDADES
+
+CLIENTES
+- CRUD já existente da V5
+- GET /api/clientes/nome/{nome}
+- GET /api/clientes/email/{email}
+
+EQUIPAMENTOS
+- GET    /api/equipamentos
+- GET    /api/equipamentos/{id_equipamento}
+- POST   /api/equipamentos
+- PUT    /api/equipamentos/{id_equipamento}
+- DELETE /api/equipamentos/{id_equipamento}
+- GET    /api/equipamentos/cliente/{id_cliente}
+
+Campos reais: id_equipamento, id_cliente, tipo, marca, modelo, numero_serie, observacoes, status, created_at, updated_at, deleted_at.
+
+Exemplo POST equipamento:
+{
+  "idCliente": 1,
+  "tipo": "TV",
+  "marca": "LG",
+  "modelo": "55AA22X",
+  "numeroSerie": "123578",
+  "observacoes": "Nao liga",
+  "status": 1
+}
+
+ORDENS DE SERVIÇO
+- GET    /api/ordens-servico
+- GET    /api/ordens-servico/{id_ordem}
+- POST   /api/ordens-servico
+- PUT    /api/ordens-servico/{id_ordem}
+- DELETE /api/ordens-servico/{id_ordem}
+- GET    /api/ordens-servico/cliente/{id_cliente}
+- GET    /api/ordens-servico/equipamento/{id_equipamento}
+
+Campos reais: id_ordem, id_equipamento, defeito_relatado, diagnostico, solucao, status, prioridade, valor_servico, valor_pecas, desconto, valor_total, created_at, updated_at, deleted_at.
+
+Importante: ordens_servico NÃO possui id_cliente. A pesquisa por cliente usa JOIN com equipamentos: ordens_servico.id_equipamento -> equipamentos.id_equipamento -> equipamentos.id_cliente.
+
+Exemplo POST ordem de serviço:
+{
+  "idEquipamento": 1,
+  "defeitoRelatado": "Ecra partido",
+  "diagnostico": "Confirmado o defeito",
+  "solucao": "Troca de ecra",
+  "status": "Em reparação",
+  "prioridade": "Normal",
+  "valorServico": 100.00,
+  "valorPecas": 50.00,
+  "desconto": 0.00
+}
+
+O valor_total é calculado pela API: valor_servico + valor_pecas - desconto.
+DELETE de equipamentos e ordens utiliza exclusão lógica através de deleted_at.

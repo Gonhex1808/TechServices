@@ -1,0 +1,46 @@
+EXEMPLO FUTURO - PRODUTOS
+=========================
+
+Quando a API ASP.NET de Produtos existir,
+o ficheiro poderá ser praticamente isto:
+
+
+from components.crud_page import CrudPage
+
+
+def criar_produtos_page(
+    page,
+    api,
+):
+    return CrudPage(
+        page=page,
+        api=api,
+
+        titulo="Produtos",
+
+        id_campo="idProduto",
+
+        colunas=[
+            ("ID", "idProduto"),
+            ("Nome", "nome"),
+            ("Preço", "preco"),
+            ("Stock", "stock"),
+        ],
+    )
+
+
+No main.py:
+
+produtos_api = CrudApi(
+    API_URL,
+    "/api/produtos",
+)
+
+
+O CrudPage NÃO é copiado.
+O CrudApi NÃO é copiado.
+
+Só muda:
+    endpoint
+    título
+    colunas

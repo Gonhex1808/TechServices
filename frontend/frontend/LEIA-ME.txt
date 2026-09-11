@@ -1,0 +1,45 @@
+TECHSERVICE FRONTEND - V2
+
+EVOLUÇÃO
+V0 = Listar + Consultar
+V1 = Editar + Excluir + interface clara
+V2 = Incluir Novo Cliente
+
+O QUE FOI ACRESCENTADO NA V2
+1. Botão "Novo Cliente" no topo da lista.
+2. Formulário em branco no painel direito.
+3. Campos: Nome, Telefone e Email.
+4. Validação simples: não permite campos vazios.
+5. POST /api/clientes para cadastrar.
+6. Após sucesso, a lista é recarregada.
+7. O formulário reaproveita os mesmos campos usados na edição.
+
+FLUXO
+Novo Cliente
+    -> preencher Nome, Telefone e Email
+    -> Salvar
+    -> CrudApi.inserir(dados)
+    -> POST /api/clientes
+    -> atualizar lista
+
+ARQUIVOS PRINCIPAIS
+main.py
+    Mantém a montagem da aplicação.
+
+components/crud_page.py
+    Contém Listar, Consultar, Editar, Excluir e agora Incluir.
+
+crud_api.py
+    Já possuía inserir(), portanto não foi necessário duplicar
+    a lógica HTTP na interface.
+
+EXECUTAR
+1. Ative o ambiente virtual.
+2. Instale:
+       pip install -r requirements.txt
+3. Confirme a API em config.py.
+4. Execute:
+       python main.py
+
+Procure no código por comentários "V2 -" para localizar rapidamente
+as alterações feitas nesta versão.
