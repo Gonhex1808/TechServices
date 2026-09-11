@@ -5,7 +5,7 @@ Se a porta da API ASP.NET ou a API Key mudar,
 alteramos apenas este ficheiro.
 """
 
-API_URL = "http://162.240.171.8:8106"
+API_URL = "http://localhost:5000"
 
 # ==============================================================
 # SEGURANÇA - API KEY
