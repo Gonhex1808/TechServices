@@ -5,7 +5,7 @@ Se a porta da API ASP.NET ou a API Key mudar,
 alteramos apenas este ficheiro.
 """
 
-API_URL = "https://e6.techservice.pt"
+API_URL = "http://162.240.171.8:8106"
 
 # ==============================================================
 # SEGURANÇA - API KEY
